@@ -19,7 +19,7 @@ public class koneksi {
     public static Connection getKoneksi(){
         if(con == null){
             try{
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
             con = DriverManager.getConnection("jdbc:mysql://localhost/db_perpus", "root", "");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Koneksi ke database gagal!");

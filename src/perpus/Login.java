@@ -43,45 +43,43 @@ public class Login extends javax.swing.JFrame {
 
         
     }
-    public void login(JTextField user, JTextField pass,String db,String a,String b,String c,String d){
-        try {
-                get();
-                String usr = user.getText();
-                String pas = pass.getText();
-                sql = "SELECT * FROM "+ db +" WHERE "+ a +"='"+ usr +"' AND "+ b +"="+ c +"('"+ pas +"')";
-                st = con.createStatement();
-                rs = st.executeQuery(sql);
-                if(rs.next()){
-                    JOptionPane.showMessageDialog(null, "Berhasil Masuk");
-                    this.dispose();
-                    if(d.equals("admin")){
-                        halaman_admin ha = new halaman_admin();
-                        ha.show();
-                    }else if(d.equals("operator")){
-                        halaman_operator ho  = new halaman_operator();
-                        ho.show();
-                    }else if(d.equals("user")){
-                        halaman_user hu = new halaman_user();
-                        hu.show();
-                    }
-                    
-                }else{
-                    JOptionPane.showMessageDialog(null, "Username atau Password SALAH");
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(this, "Terjadi Kesalahan");
-                user_admin.setText("");
-                pass_admin.setText("");
-                user_admin.requestFocus();
-                operator_id.setText("");
-                pass_operator.setText("");
-                operator_id.requestFocus();
-                user_id.setText("");
-                pass_user.setText("");
-                user_id.requestFocus();
+    public void login(JTextField user, JTextField pass, String db, String usernameColumn, String passwordColumn, String role) {
+    try {
+        String usr = user.getText(); // Ambil username dari JTextField
+        String pas = pass.getText(); // Ambil password dari JTextField
+
+        // Query SQL untuk mencocokkan username dan password
+        String sql = "SELECT * FROM " + db + " WHERE " + usernameColumn + " = ? AND " + passwordColumn + " = ?";
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.setString(1, usr);
+        pst.setString(2, pas);
+
+        ResultSet rs = pst.executeQuery();
+
+        if (rs.next()) {
+            JOptionPane.showMessageDialog(null, "Berhasil Masuk");
+            this.dispose();
+
+            // Cek role pengguna
+            if (role.equalsIgnoreCase("admin")) {
+                halaman_admin ha = new halaman_admin();
+                ha.show();
+            } else if (role.equalsIgnoreCase("operator")) {
+                halaman_operator ho = new halaman_operator();
+                ho.show();
+            } else if (role.equalsIgnoreCase("user")) {
+                halaman_user hu = new halaman_user();
+                hu.show();
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Username atau Password SALAH");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Terjadi Kesalahan: " + e.getMessage());
     }
+}
+
     public void get(){
         id = user_id.getText();
     }
@@ -672,28 +670,31 @@ public class Login extends javax.swing.JFrame {
 
     private void masuk_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masuk_adminActionPerformed
         // TODO add your handling code here:
-       if(kosong_admin()){
-            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data !","Peringatan", JOptionPane.ERROR_MESSAGE);
-       }else{
-            login(user_admin,pass_admin,"tb_admin","username","password","HEX","admin");
-       }
+        if (kosong_admin()) {
+            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data!", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Panggil metode login dengan parameter yang sesuai
+            login(user_admin, pass_admin, "tb_admin", "username", "password", "admin");
+        }
     }//GEN-LAST:event_masuk_adminActionPerformed
 
     private void masuk_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masuk_userActionPerformed
         // TODO add your handling code here:
-        if(kosong_user()){
-            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data !","Kesalahan", JOptionPane.ERROR_MESSAGE);
-        }else{
-            login(user_id,pass_user,"tb_anggota","id_anggota","password","","user");
+        if (kosong_user()) {
+            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Panggil login tanpa parameter tambahan yang tidak digunakan
+            login(user_id, pass_user, "tb_anggota", "id_anggota", "password", "user");
         }
     }//GEN-LAST:event_masuk_userActionPerformed
 
     private void masuk_operatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masuk_operatorActionPerformed
         // TODO add your handling code here:
-        if(kosong_operator()){
-            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data !","Kesalahan", JOptionPane.ERROR_MESSAGE);
-        }else{
-            login(operator_id,pass_operator,"tb_petugas","id_operator","password","","operator");
+        if (kosong_operator()) {
+            JOptionPane.showMessageDialog(null, "Harap Lengkapi Data!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Panggil login tanpa parameter tambahan yang tidak digunakan
+            login(operator_id, pass_operator, "tb_petugas", "id_operator", "password", "operator");
         }
     }//GEN-LAST:event_masuk_operatorActionPerformed
 

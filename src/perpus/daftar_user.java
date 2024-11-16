@@ -502,8 +502,6 @@ public class daftar_user extends javax.swing.JFrame {
         }else if(tidak_sesuai()){
             JOptionPane.showMessageDialog(null, "Password tidak sesuai !","Kesalahan", JOptionPane.ERROR_MESSAGE);            
         }else{
-            Kebijakan kb = new Kebijakan();
-            kb.show();
             int jawab;
             if((jawab = JOptionPane.showConfirmDialog(null,"Dengan menekan tombol 'Yes' maka anda menerima segala kebijakan perpus ini", "Konfirmasi", JOptionPane.OK_CANCEL_OPTION)) == 0){
                 try {
@@ -521,7 +519,6 @@ public class daftar_user extends javax.swing.JFrame {
                 Login lg = new Login();
                 lg.show();
                 this.dispose();
-                kb.dispose();
             } catch (Exception e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(this, "Terjadi Kesalahan");

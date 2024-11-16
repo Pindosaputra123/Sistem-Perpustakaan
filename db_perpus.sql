@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2024 at 09:48 AM
+-- Generation Time: Nov 16, 2024 at 10:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -87,8 +87,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`username`, `password`) VALUES
-('admin', '61646D696E6E7961'),
-('balabala', 'bala123');
+('pindo', 'pindo123');
 
 -- --------------------------------------------------------
 
@@ -111,23 +110,11 @@ CREATE TABLE `tb_anggota` (
 --
 
 INSERT INTO `tb_anggota` (`id_anggota`, `nama`, `password`, `jk`, `telp`, `alamat`, `status`) VALUES
-('USR001', 'ahrul', 'ahrul123', 'Laki-laki', '0284975820492', 'Cisarua', 'Pinjam'),
-('USR002', 'ulum', '12345678', 'Laki-laki', '0942758929402', 'cibedug', 'Pinjam'),
-('USR003', 'dian', '87654321', 'Perempuan', '042402850', 'bandung', 'Pinjam'),
-('USR004', 'kumallllll', 'kumal123', 'Laki-laki', '4248972359273', 'puncak', 'Tidak pinjam'),
-('USR005', 'ayu', 'ayu12345', 'Laki-laki', '4247927948402', 'gadog', 'Pinjam'),
-('USR006', 'fajar', 'fajar123', 'Laki-laki', '8479279842748', 'tajur', 'Pinjam'),
-('USR007', 'riski', 'riski123', 'Laki-laki', '42402834098', 'bogor', 'Tidak pinjam'),
-('USR008', 'jflkdsj', '12345678', 'Perempuan', '57349857349', 'cisarua', 'Pinjam'),
-('USR009', 'Alif', '12345678', 'Laki-laki', '1123', 'ppp', 'Pinjam'),
-('USR010', 'baba', 'babababa', 'Laki-laki', '12345678', 'baba', 'Pinjam'),
-('USR011', 'abil', 'abilganteng', 'Laki-laki', '0898976808094', 'batu layang, puncak', 'Pinjam'),
-('USR012', 'fauzi', 'fauzifadilah', 'Laki-laki', '083818317005', 'jl.ciapus.bogor selatan', 'Pinjam'),
-('USR013', 'dimas', 'dimas123', 'Laki-laki', '0980980428042', 'bogor', 'Tidak pinjam'),
-('USR014', 'pai', 'pai12345', 'Laki-laki', '0432022384098', 'papua', 'Tidak pinjam'),
-('USR015', 'lisa', 'lisa1234', 'Perempuan', '0234872975924', 'bandung', 'Pinjam'),
-('USR016', 'Milea', 'milea123', 'Perempuan', '0251998877', 'Cisarua', 'Tidak pinjam'),
-('USR017', 'wilona', 'wilona123', 'Perempuan', '0899325258294', 'jakarta pusat', 'Tidak pinjam');
+('USR001', 'Abdul Ghani Firmansyah', 'abdul123', 'Laki-laki', '081234567890', 'Bekasi, Jawa Barat', 'Tidak pinjam'),
+('USR002', 'Erizka Nia Ramadhani', 'erizka123', 'Perempuan', '081234567890', 'Karawang, Jawa Barat', 'Tidak pinjam'),
+('USR003', 'Hidayanthi Dwi Puja', 'Hidayanthi123', 'Perempuan', '081234567890', 'Bekasi, Jawa Barat', 'Tidak pinjam'),
+('USR004', 'Muhammad Bayu Pratama', 'Bayu123', 'Laki-laki', '081234567890', 'Bekasi, Jawa Barat', 'Tidak pinjam'),
+('USR005', 'Pangudian Siagian', 'dian123', 'Laki-laki', '081234567890', 'Karawang, Jawa Barat', 'Tidak pinjam');
 
 -- --------------------------------------------------------
 
@@ -149,21 +136,8 @@ CREATE TABLE `tb_buku` (
 --
 
 INSERT INTO `tb_buku` (`kode_buku`, `judul`, `penerbit`, `tahun_terbit`, `kategori`, `jumlah`) VALUES
-('BK001', 'Dragon', 'Mobel', 2010, 'Perang', 93),
-('BK002', 'saku', 'saya', 8900, '123', 130),
-('BK003', 'Dia', 'Gramedia', 2011, 'Remaja', 73),
-('BK004', 'mengenal huruf', 'hurf', 2005, 'Pendidikan', 18),
-('BK005', 'merdeka', 'indonesiamerdeka', 2000, 'pendidikan', 10),
-('BK006', 'lupus', 'gram', 2010, 'komedi', 25),
-('BK007', 'dilan', 'pidi baiq', 2015, 'remaja', 120),
-('BK008', 'Dialah mentari', 'gaya', 2014, 'islami', 27),
-('BK009', 'marmut merah jambu', 'bukune', 2012, 'komik', 38),
-('BK010', 'suara dari dilan', 'wahh', 2011, 'remaja', 49),
-('BK011', 'Bkp', 'wikrama', 2017, 'Pendidikan', 1600),
-('BK012', 'Ipa vs ips', 'aku', 2009, 'Pendidikan', 52),
-('BK013', 'Boole', 'IT', 2005, 'Koding', 12),
-('BK014', 'Suara hujan', 'mentari', 2018, 'novel', 35),
-('BK015', 'sekolahku', 'gramedia', 2015, 'pendidikan', 11);
+('BK0001', 'Basis Data', 'Cristiano Ronaldo', 2024, 'Pendidikan', 100),
+('BK0002', 'Pemrograman Berorientasi Objek', 'Lionel Messi', 2024, 'Pendidikan', 75);
 
 -- --------------------------------------------------------
 
@@ -181,28 +155,6 @@ CREATE TABLE `tb_kembali` (
   `keterangan` enum('Telat','Tidak telat','Hilang','') NOT NULL,
   `jumlah` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tb_kembali`
---
-
-INSERT INTO `tb_kembali` (`kode_kembali`, `kode_pinjam`, `id_anggota`, `kode_buku`, `tgl_kembali`, `denda`, `keterangan`, `jumlah`) VALUES
-('125866', '258152', 'USR004', 'BK001', '2024-11-16', 200000, 'Hilang', 0),
-('339088', '972993', 'USR004', 'BK001', '2018-02-21', 0, 'Tidak telat', 1),
-('432050', '235209', 'USR004', 'BK001', '2018-02-16', 200000, 'Hilang', 0),
-('56592', '245143', 'USR007', 'BK004', '2018-02-22', 200000, 'Hilang', 0),
-('619131', '23408', 'USR004', 'BK003', '2018-02-22', 200000, 'Hilang', 0),
-('644880', '820264', 'USR005', 'BK005', '2018-02-22', 0, 'Tidak telat', 1),
-('65575', '552698', 'USR005', 'BK003', '2018-02-16', 2000, 'Telat', 1),
-('695104', '623597', 'USR007', 'BK003', '2018-02-21', 0, 'Tidak telat', 1),
-('697354', '126159', 'USR001', 'BK004', '2018-02-15', 0, 'Tidak telat', 1),
-('724514', '961646', 'USR005', 'BK001', '2018-02-18', 0, 'Tidak telat', 1),
-('747007', '250524', 'USR008', 'BK001', '2018-02-17', 200000, 'Hilang', 0),
-('781009', '495969', 'USR006', 'BK003', '2018-02-17', 0, 'Tidak telat', 1),
-('920611', '367751', 'USR006', 'BK004', '2018-02-16', 0, 'Tidak telat', 1),
-('931697', '919025', 'USR002', 'BK004', '2018-02-16', 200000, 'Hilang', 0),
-('932284', '250795', 'USR013', 'BK012', '2018-02-22', 0, 'Tidak telat', 1),
-('944899', '118446', 'USR006', 'BK001', '2018-02-15', 200000, 'Hilang', 0);
 
 --
 -- Triggers `tb_kembali`
@@ -235,9 +187,9 @@ CREATE TABLE `tb_petugas` (
 --
 
 INSERT INTO `tb_petugas` (`id_operator`, `nama`, `password`, `jk`, `telp`, `alamat`) VALUES
-('OPR01', 'Ulum', 'ahrulsyamil', 'Laki-laki', '083814342234', 'Cisarua, Bogor Jawa Barat'),
-('OPR02', 'Dilah', 'dilah123', 'Perempuan', '0251398023288', 'cipayung'),
-('OPR03', 'sri', 'sriii123', 'Perempuan', '9088097127092', 'papua');
+('OPR01', 'Ayunisa Yasmin', 'ayu123', 'Perempuan', '081234567890', 'Karawang, Jawa Barat'),
+('OPR02', 'Satria Panca', 'satria123', 'Laki-laki', '080987654321', 'Karawang, Jawa Barat'),
+('OPR03', 'Ilham Syihabudin', 'ilham123', 'Laki-laki', '081234509876', 'Karawang, Jawa Barat');
 
 -- --------------------------------------------------------
 
@@ -256,39 +208,6 @@ CREATE TABLE `tb_pinjam` (
   `jumlah` int(1) NOT NULL,
   `kt` enum('Sudah kembali','Belum kembali','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tb_pinjam`
---
-
-INSERT INTO `tb_pinjam` (`kode_pinjam`, `id_anggota`, `nama`, `kode_buku`, `judul`, `tgl_pinjam`, `tgl_hrskembali`, `jumlah`, `kt`) VALUES
-('115552', 'USR006', 'fajar', 'BK001', 'Dragon', '2018-02-23', '2018-03-02', 1, 'Belum kembali'),
-('118446', 'USR006', 'fajar', 'BK001', 'Dragon', '2018-02-15', '2018-02-22', 1, 'Sudah kembali'),
-('126159', 'USR001', 'udin', 'BK004', 'mengenal huruf', '2018-02-08', '2018-02-15', 1, 'Sudah kembali'),
-('140718', 'USR005', 'ayu', 'BK015', 'sekolahku', '2018-02-23', '2018-03-02', 1, 'Belum kembali'),
-('164267', 'USR009', 'Alif', 'BK003', 'Dia', '2018-02-23', '2018-03-02', 1, 'Belum kembali'),
-('233808', 'USR003', 'dian', 'BK003', 'Dia', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('23408', 'USR004', 'kumallllll', 'BK003', 'Dia', '2018-02-22', '2018-03-01', 1, 'Sudah kembali'),
-('235209', 'USR004', 'kumal', 'BK001', 'Dragon', '2018-02-15', '2018-02-22', 1, 'Sudah kembali'),
-('245143', 'USR007', 'riski', 'BK004', 'mengenal huruf', '2018-02-22', '2018-03-01', 1, 'Sudah kembali'),
-('250524', 'USR008', 'jflkdsj', 'BK001', 'Dragon', '2018-02-17', '2018-02-24', 1, 'Sudah kembali'),
-('250795', 'USR013', 'dimas', 'BK012', 'Ipa vs ips', '2018-02-22', '2018-03-01', 1, 'Sudah kembali'),
-('258152', 'USR004', 'kumallllll', 'BK001', 'Dragon', '2024-11-16', '2024-11-23', 1, 'Sudah kembali'),
-('264120', 'USR008', 'jflkdsj', 'BK010', 'suara dari dilan', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('289841', 'USR002', 'ulum', 'BK001', 'Dragon', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('367751', 'USR006', 'fajar', 'BK004', 'mengenal huruf', '2018-02-16', '2018-02-23', 1, 'Sudah kembali'),
-('495969', 'USR006', 'fajar', 'BK003', 'Dia', '2018-02-17', '2018-02-24', 1, 'Sudah kembali'),
-('502832', 'USR001', 'ahrul', 'BK001', 'Dragon', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('523047', 'USR010', 'baba', 'BK004', 'mengenal huruf', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('552698', 'USR005', 'ayu', 'BK003', 'Dia', '2018-02-05', '2018-02-15', 1, 'Sudah kembali'),
-('621840', 'USR011', 'abil', 'BK001', 'Dragon', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('623597', 'USR007', 'riski', 'BK003', 'Dia', '2018-02-21', '2018-02-28', 1, 'Sudah kembali'),
-('626961', 'USR012', 'fauzi', 'BK008', 'Dialah mentari', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('678576', 'USR015', 'lisa', 'BK001', 'Dragon', '2018-02-22', '2018-03-01', 1, 'Belum kembali'),
-('820264', 'USR005', 'ayu', 'BK005', 'merdeka', '2018-02-22', '2018-03-01', 1, 'Sudah kembali'),
-('919025', 'USR002', 'ulum', 'BK004', 'mengenal huruf', '2018-02-16', '2018-02-23', 1, 'Sudah kembali'),
-('961646', 'USR005', 'ayu', 'BK001', 'Dragon', '2018-02-17', '2018-02-24', 1, 'Sudah kembali'),
-('972993', 'USR004', 'kumallllll', 'BK001', 'Dragon', '2018-02-21', '2018-02-28', 1, 'Sudah kembali');
 
 --
 -- Triggers `tb_pinjam`

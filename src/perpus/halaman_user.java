@@ -140,30 +140,6 @@ public class halaman_user extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    public void kembali_daftar(){
-//        daftar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        recom.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-    }
-    public void kembali_recom(){
-        daftar.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-//        recom.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        com1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-    }
-    public void kembali_com1(){
-        daftar.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        recom.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-//        com1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        com2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-    }
-    public void kembali_com2(){
-        daftar.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        recom.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-//        com2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-    }
    
     /**
      * This method is called from within the constructor to initialize the form.
@@ -192,10 +168,6 @@ public class halaman_user extends javax.swing.JFrame {
         daftar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         recom = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        com1 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        com2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         buku = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
@@ -409,14 +381,18 @@ public class halaman_user extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(daftar, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(daftar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        body.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 150, 40));
+        body.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 150, 40));
 
         jPanel4.setBackground(new java.awt.Color(124, 138, 153));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -453,102 +429,18 @@ public class halaman_user extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(recom, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(recom, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(recom, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(recom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        body.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 150, 40));
-
-        jPanel5.setBackground(new java.awt.Color(108, 122, 137));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel5MouseExited(evt);
-            }
-        });
-
-        com1.setBackground(new java.awt.Color(156, 170, 185));
-        com1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com1.setForeground(new java.awt.Color(255, 255, 255));
-        com1.setText("comming soon...");
-        com1.setBorder(null);
-        com1.setContentAreaFilled(false);
-        com1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        com1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                com1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                com1MouseExited(evt);
-            }
-        });
-        com1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                com1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(com1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(com1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        body.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 150, 40));
-
-        jPanel6.setBackground(new java.awt.Color(92, 106, 121));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel6MouseExited(evt);
-            }
-        });
-
-        com2.setBackground(new java.awt.Color(156, 170, 185));
-        com2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        com2.setForeground(new java.awt.Color(255, 255, 255));
-        com2.setText("comming soon...");
-        com2.setBorder(null);
-        com2.setContentAreaFilled(false);
-        com2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        com2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                com2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                com2MouseExited(evt);
-            }
-        });
-        com2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                com2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(com2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(com2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        body.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 150, 40));
+        body.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 150, 40));
 
         jScrollPane1.setBorder(null);
 
@@ -620,36 +512,6 @@ public class halaman_user extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(124,138,153));
     }//GEN-LAST:event_jPanel4MouseExited
 
-    private void com1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_com1MouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel5);
-    }//GEN-LAST:event_com1MouseEntered
-
-    private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel5);
-    }//GEN-LAST:event_jPanel5MouseEntered
-
-    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
-        // TODO add your handling code here:
-        jPanel5.setBackground(new java.awt.Color(108,122,137));
-    }//GEN-LAST:event_jPanel5MouseExited
-
-    private void com2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_com2MouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel6);
-    }//GEN-LAST:event_com2MouseEntered
-
-    private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel6);
-    }//GEN-LAST:event_jPanel6MouseEntered
-
-    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
-        // TODO add your handling code here:
-        jPanel6.setBackground(new java.awt.Color(92,106,121));
-    }//GEN-LAST:event_jPanel6MouseExited
-
     private void recomMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recomMouseEntered
         // TODO add your handling code here:
         setColor(jPanel4);
@@ -667,20 +529,9 @@ public class halaman_user extends javax.swing.JFrame {
 
     }//GEN-LAST:event_recomMouseExited
 
-    private void com1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_com1MouseExited
-        // TODO add your handling code here:
-        jPanel5.setBackground(new java.awt.Color(108,122,137));
-    }//GEN-LAST:event_com1MouseExited
-
-    private void com2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_com2MouseExited
-        // TODO add your handling code here:
-        jPanel6.setBackground(new java.awt.Color(92,106,121));
-    }//GEN-LAST:event_com2MouseExited
-
     private void daftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarActionPerformed
         // TODO add your handling code here:
         daftar.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        kembali_daftar();
         judul_daftar();
         tampil_daftar();
     }//GEN-LAST:event_daftarActionPerformed
@@ -688,22 +539,9 @@ public class halaman_user extends javax.swing.JFrame {
     private void recomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recomActionPerformed
         // TODO add your handling code here:
         recom.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        kembali_recom();
         judul_rekom();
         tampil_rekom();
     }//GEN-LAST:event_recomActionPerformed
-
-    private void com1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_com1ActionPerformed
-        // TODO add your handling code here:
-        com1.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        kembali_com1();
-    }//GEN-LAST:event_com1ActionPerformed
-
-    private void com2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_com2ActionPerformed
-        // TODO add your handling code here:
-        com2.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        kembali_com2();
-    }//GEN-LAST:event_com2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -760,8 +598,6 @@ public class halaman_user extends javax.swing.JFrame {
     private javax.swing.JPanel body;
     private javax.swing.JTable buku;
     private javax.swing.JButton close;
-    private javax.swing.JButton com1;
-    private javax.swing.JButton com2;
     private javax.swing.JButton daftar;
     private javax.swing.JPanel header;
     private javax.swing.JButton jButton1;
@@ -775,8 +611,6 @@ public class halaman_user extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout;
     private javax.swing.JButton recom;

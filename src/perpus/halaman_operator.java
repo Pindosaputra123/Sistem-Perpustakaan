@@ -14,13 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import static koneksi.koneksi.con;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -75,9 +68,6 @@ public class halaman_operator extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         transaksi = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        laporan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -194,7 +184,7 @@ public class halaman_operator extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        body.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 150, 140));
+        body.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 150, 140));
 
         jPanel2.setBackground(new java.awt.Color(156, 170, 185));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,7 +240,7 @@ public class halaman_operator extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        body.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 150, 140));
+        body.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 150, 140));
 
         jPanel3.setBackground(new java.awt.Color(140, 154, 169));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -306,7 +296,7 @@ public class halaman_operator extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        body.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 150, 140));
+        body.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 150, 140));
 
         jPanel4.setBackground(new java.awt.Color(124, 138, 153));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -361,7 +351,7 @@ public class halaman_operator extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        body.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 150, 140));
+        body.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, 150, 140));
 
         jPanel5.setBackground(new java.awt.Color(108, 122, 137));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -414,60 +404,7 @@ public class halaman_operator extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        body.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 280, 150, 140));
-
-        jPanel6.setBackground(new java.awt.Color(92, 106, 121));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel6MouseExited(evt);
-            }
-        });
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/document (1).png"))); // NOI18N
-
-        laporan.setBackground(new java.awt.Color(156, 170, 185));
-        laporan.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        laporan.setForeground(new java.awt.Color(255, 255, 255));
-        laporan.setText("Laporan");
-        laporan.setBorder(null);
-        laporan.setContentAreaFilled(false);
-        laporan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        laporan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                laporanMouseEntered(evt);
-            }
-        });
-        laporan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                laporanActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(laporan)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(laporan)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-
-        body.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 150, 140));
+        body.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 280, 150, 140));
 
         getContentPane().add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 980, 470));
 
@@ -509,11 +446,6 @@ public class halaman_operator extends javax.swing.JFrame {
         setColor(jPanel5);
     }//GEN-LAST:event_jPanel5MouseEntered
 
-    private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel6);
-    }//GEN-LAST:event_jPanel6MouseEntered
-
     private void jPanel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseExited
         // TODO add your handling code here:
                 jPanel2.setBackground(new java.awt.Color(156,170,185));
@@ -537,12 +469,6 @@ public class halaman_operator extends javax.swing.JFrame {
                 jPanel5.setBackground(new java.awt.Color(108,122,137));
 
     }//GEN-LAST:event_jPanel5MouseExited
-
-    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
-        // TODO add your handling code here:
-                jPanel6.setBackground(new java.awt.Color(92,106,121));
-
-    }//GEN-LAST:event_jPanel6MouseExited
 
     private void jPanel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseExited
         // TODO add your handling code here:
@@ -582,24 +508,6 @@ public class halaman_operator extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_transaksiActionPerformed
 
-    private void laporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laporanActionPerformed
-        // TODO add your handling code here:
-        String reportSource = null;
-        String reportDest = null;
-        
-       try{
-        reportSource = "D:\\PROJECT\\Java Project\\Perpus\\src\\Laporan\\laporan.jrxml";
-        reportDest = "D:\\PROJECT\\Java Project\\Perpus\\src\\Laporan\\laporan.jasper";
-        
-        JasperReport jasperReport = JasperCompileManager.compileReport(reportSource);
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,null,con);
-        JasperExportManager.exportReportToHtmlFile(jasperPrint, reportDest);
-        JasperViewer.viewReport(jasperPrint,false);
-       }catch(JRException e){
-           e.printStackTrace();
-       }
-    }//GEN-LAST:event_laporanActionPerformed
-
     private void anggotaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anggotaMouseEntered
         // TODO add your handling code here:
         setColor(jPanel2);
@@ -619,11 +527,6 @@ public class halaman_operator extends javax.swing.JFrame {
         // TODO add your handling code here:
         setColor(jPanel5);
     }//GEN-LAST:event_transaksiMouseEntered
-
-    private void laporanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laporanMouseEntered
-        // TODO add your handling code here:
-        setColor(jPanel6);
-    }//GEN-LAST:event_laporanMouseEntered
 
     private void bukuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bukuMouseEntered
         // TODO add your handling code here:
@@ -681,7 +584,6 @@ public class halaman_operator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -692,8 +594,6 @@ public class halaman_operator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JButton laporan;
     private javax.swing.JButton logout;
     private javax.swing.JButton pegembalian;
     private javax.swing.JButton peminjaman;
