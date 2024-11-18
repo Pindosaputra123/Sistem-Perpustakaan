@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class pengaturan_user extends javax.swing.JFrame {
     public Statement st;

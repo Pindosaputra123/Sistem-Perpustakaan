@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class Pengembalian extends javax.swing.JFrame {
     public Statement st;

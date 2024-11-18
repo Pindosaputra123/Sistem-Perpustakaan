@@ -20,7 +20,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class lihat_anggota extends javax.swing.JFrame {
     public Statement st;

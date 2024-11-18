@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class Login extends javax.swing.JFrame {
     
@@ -39,46 +39,43 @@ public class Login extends javax.swing.JFrame {
         (screenSize.width - frameSize.width) / 2,
         (screenSize.height - frameSize.height) / 2);
         sadmin.setBackground(new java.awt.Color(26,177,136));
-
-
-        
     }
     public void login(JTextField user, JTextField pass, String db, String usernameColumn, String passwordColumn, String role) {
-    try {
-        String usr = user.getText(); // Ambil username dari JTextField
-        String pas = pass.getText(); // Ambil password dari JTextField
+        try {
+            String usr = user.getText(); // Ambil username dari JTextField
+            String pas = pass.getText(); // Ambil password dari JTextField
 
-        // Query SQL untuk mencocokkan username dan password
-        String sql = "SELECT * FROM " + db + " WHERE " + usernameColumn + " = ? AND " + passwordColumn + " = ?";
-        PreparedStatement pst = con.prepareStatement(sql);
-        pst.setString(1, usr);
-        pst.setString(2, pas);
+            // Query SQL untuk mencocokkan username dan password
+            String sql = "SELECT * FROM " + db + " WHERE " + usernameColumn + " = ? AND " + passwordColumn + " = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, usr);
+            pst.setString(2, pas);
 
-        ResultSet rs = pst.executeQuery();
+            ResultSet rs = pst.executeQuery();
 
-        if (rs.next()) {
-            JOptionPane.showMessageDialog(null, "Berhasil Masuk");
-            this.dispose();
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, "Berhasil Masuk");
+                this.dispose();
 
-            // Cek role pengguna
-            if (role.equalsIgnoreCase("admin")) {
-                halaman_admin ha = new halaman_admin();
-                ha.show();
-            } else if (role.equalsIgnoreCase("operator")) {
-                halaman_operator ho = new halaman_operator();
-                ho.show();
-            } else if (role.equalsIgnoreCase("user")) {
-                halaman_user hu = new halaman_user();
-                hu.show();
+                // Cek role pengguna
+                if (role.equalsIgnoreCase("admin")) {
+                    halaman_admin ha = new halaman_admin();
+                    ha.show();
+                } else if (role.equalsIgnoreCase("operator")) {
+                    halaman_operator ho = new halaman_operator();
+                    ho.show();
+                } else if (role.equalsIgnoreCase("user")) {
+                    halaman_user hu = new halaman_user();
+                    hu.show();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Username atau Password SALAH");
             }
-        } else {
-            JOptionPane.showMessageDialog(null, "Username atau Password SALAH");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Terjadi Kesalahan: " + e.getMessage());
         }
-    } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Terjadi Kesalahan: " + e.getMessage());
     }
-}
 
     public void get(){
         id = user_id.getText();

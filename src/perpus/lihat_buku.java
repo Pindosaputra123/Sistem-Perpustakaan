@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class lihat_buku extends javax.swing.JFrame {
     public Statement st;

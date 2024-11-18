@@ -17,7 +17,7 @@ import static koneksi.koneksi.con;
 
 /**
  *
- * @author User
+ * @author Pindo
  */
 public class halaman_operator extends javax.swing.JFrame {
 
